@@ -1,9 +1,9 @@
 services:
   # Serviço da API (Backend)
   - type: web
-    name: samurai-api
+    name: samuraibs-web
     env: node
-    rootDir: samurai-apps/api
+    rootDir: samurai-apps/web
     plan: free # ou o plano que você preferir
     buildCommand: "npm install"
     startCommand: "npm start"
