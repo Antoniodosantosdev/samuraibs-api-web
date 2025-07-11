@@ -5,8 +5,8 @@ services:
     env: node
     rootDir: samurai-apps/web
     plan: free # ou o plano que você preferir
-    buildCommand: "npm install"
-    startCommand: "npm start"
+    buildCommand: "yarn install"
+    startCommand: "yarn start"
     healthCheckPath: /api/health # Exemplo: crie uma rota de health check na sua API
     envVars:
       - key: NODE_ENV
@@ -27,7 +27,8 @@ services:
     env: static
     rootDir: samurai-apps/web
     plan: free # ou o plano que você preferir
-    buildCommand: "npm install && npm run build"
+    buildCommand: yarn && yarn build
+    startCommand: yarn start
     publishDir: dist
     # Regra de reescrita para Single Page Applications (SPA) como React, Vue, Angular
     routes:
